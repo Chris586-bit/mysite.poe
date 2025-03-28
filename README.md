@@ -1,2 +1,3 @@
-# mysite.poe
+Project Name
+Short introduction of the project.
  
