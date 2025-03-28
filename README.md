@@ -12,7 +12,9 @@ Sitemap indicating the structureof the project.
 
 *Project timeline which has about 5 phases within a span of a year.
 
-*Budget Estimation
+*Budget Estimation.
+
+*Budget Breakdown.
 
 Short introduction of the project.
 
