@@ -64,7 +64,7 @@ h1 {
 }
 .footerBottom{
     background-color: rgba(122, 112, 112, 0.781);
-    padding:20px;
+    padding-top:20px;
     text-align:center;
 }
 .footerBottom p{
