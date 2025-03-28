@@ -10,7 +10,9 @@ Sitemap indicating the structureof the project.
 
 *Design Aesthetic
 
-*Project timeline
+*Project timeline which has about 5 phases within a span of a year.
+
+*Budget Estimation
 
 Short introduction of the project.
 
