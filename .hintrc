@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/language": [
+      "default",
+      {
+        "html-lang-valid": "off"
+      }
+    ],
+    "highest-available-document-mode": "off",
+    "meta-viewport": "off",
+    "no-inline-styles": "off"
+  }
+}
