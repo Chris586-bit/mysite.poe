@@ -21,6 +21,15 @@
           "iframe[loading]"
         ]
       }
-    ]
-  }
+    ],
+    "compat-api/css": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_ff <= 137",
+    "not firefox <= 137",
+    "not ios_saf <= 18.4",
+    "not safari <= 18.4"
+  ]
 }
