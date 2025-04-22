@@ -31,34 +31,73 @@ h1 {
     float: left;
 }
 .footer{
-    background-color:black;
+    background-color:#24262b;
+    padding:70px 0;
+}
+.row{
+    display:flex;
+    flex-wrap: wrap;
 }
 .footercontainer{
     width:100%;
     padding:70px 30px 20px;
 }
-.socialicons{
+.footer-col{
+    width: 25%;
+    padding:0 15px;
+}
+.footer-col h4{
+    font-size:18px;
+    color:#ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width:50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size:16px;
+    text-transform: capitalize;
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color:#bbbbbb;
+    display: block;
+}
+.social-links{
     display: flex;
     justify-content: center;
 }
-.socialicons a{
+.social-links a{
     text-decoration: none;
     padding:10px;
     background-color:antiquewhite;
     margin:10px;
     border-radius:50%;
 }
-.socialicons a i{
+.social-links a i{
     font: size 2px;
     color:black;
     opacity:0.9;
 }
 /* hover effects on social media icons*/
-.socialicons a:hover{
+.social-links a:hover{
     background-color: #111;
     transition:0.5s
 }
-.socialicons a:hover i{
+.social-links a:hover i{
     color:antiquewhite;
     transition:0.5s;
 }
