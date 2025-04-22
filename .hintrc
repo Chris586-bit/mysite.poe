@@ -11,6 +11,16 @@
     ],
     "highest-available-document-mode": "off",
     "meta-viewport": "off",
-    "no-inline-styles": "off"
+    "no-inline-styles": "off",
+    "axe/name-role-value": "off",
+    "axe/text-alternatives": "off",
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "iframe[loading]"
+        ]
+      }
+    ]
   }
 }
