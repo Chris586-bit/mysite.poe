@@ -86,7 +86,7 @@ h1 {
     color:#ffffff;
     padding-left: 10px;
 }
-.footer-col social-links a{
+.footer-col .social-links a{
     display:inline-block;
     height: 40px;
     width:40px;
@@ -110,14 +110,7 @@ h1 {
     color:#ffffff;
     transition: all 0.5s ease;
 }
-.social-links a{
-    text-decoration: none;
-    padding:10px;
-    background-color:antiquewhite;
-    margin:10px;
-    border-radius:50%;
-}
-.social-links a i{
+.footer-col .social-links a i{
     font: size 2px;
     color:black;
     opacity:0.9;
@@ -127,7 +120,7 @@ h1 {
     color: #24262b;
     background-color: #ffffff;
 }
-.social-links a:hover i{
+.footer-col .social-links a:hover i{
     color:antiquewhite;
     transition:0.5s;
 }
