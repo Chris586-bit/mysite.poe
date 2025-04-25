@@ -1,14 +1,14 @@
 <DOCTYPE! html>
     <html lang="eng">
         <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE-edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>LogiTech | HOME |</title>
-            <link rel="icon" type="image/x-icon" href="images/x.png">
+             <meta charset="UTF-8">
+             <meta http-equiv="X-UA-Compatible" content="IE-edge">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>LogiTech | HOME |</title>
+             <link rel="icon" type="image/x-icon" href="images/x.png">
 
-            <link rel="stylesheet" href="files.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+             <link rel="stylesheet" href="files.css">
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
              integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
               crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -16,7 +16,73 @@
                 body{
                     background-image: url(images/ai.jpg);
                     background-size: cover;
+                    font-family: sans-serif;
+                    color:#fff
                 }
+                .cta-section{
+                    background:url(images/mountain.jpg) center/cover no-repeat;
+                    position:relative;
+                    overflow:hidden;
+                    padding:100px 30px;
+                    margin-top:100px
+                }
+                .background-overlay{
+                    background:linear-gradient(to right,rgb(100,75,70)0%,rgba(120,90,80,0.7)100%);
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%
+                }
+                .cta-content{
+                    z-index: 1;
+                    position: relative;
+                    max-width: 1200px;
+                    margin:auto;
+                    text-align: center;
+                }
+                h2{
+                    font-size: 50px;
+                    letter-spacing: 2px;
+                    font-family: "Permanent Marker",cursive;
+                    margin:15px 0;
+                }
+                p{
+                    line-height: 24px;
+                }
+                .cta-btn{
+                    padding:78px 40px;
+                    line-height:21px;
+                    font-size:18px;
+                    color:#fff;
+                    text-decoration: none;
+                    background:#f96700;
+                    text-transform: uppercase;
+                    display:block;
+                }
+                .btn-holder{
+                    float:right;
+                }
+                .cta-col{
+                    margin-bottom: 15px;
+                    width:100%;
+                    float:left;
+                }
+                @media (min-width:768px){
+                    .cta-content{
+                        text-align: left;
+                    }
+                    .cta-col{
+                        min-height: 200px;
+                    }
+                    .col_1{width:60%}
+                    .col_2{width:40%}
+                }
+                .col-2{
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+                }                   
               </style>
             
         </head>
