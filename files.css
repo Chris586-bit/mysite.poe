@@ -137,15 +137,6 @@ h1 {
     }
     
 }
-.footerBottom{
-    background-color: rgba(122, 112, 112, 0.781);
-    padding-top:20px;
-    text-align:center;
-    border: 1px solid;
-}
-.footerBottom p{
-    color:white;
-}
 .designer{
     opacity:0.9;
     text-transform:uppercase;
