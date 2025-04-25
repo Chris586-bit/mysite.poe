@@ -131,6 +131,14 @@ h1 {
     color:antiquewhite;
     transition:0.5s;
 }
+/*responsive*/
+@media(max-width:767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    
+}
 .footerBottom{
     background-color: rgba(122, 112, 112, 0.781);
     padding-top:20px;
