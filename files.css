@@ -128,14 +128,6 @@ h1 {
     color:antiquewhite;
     transition:0.5s;
 }
-/*responsive*/
-@media(max-width:767px){
-    .footer-col{
-        width: 50%;
-        margin-bottom: 30px;
-    }
-    
-}
 .designer{
     opacity:0.9;
     text-transform:uppercase;
