@@ -30,6 +30,11 @@ h1 {
 .navbar li{
     float: left;
 }
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 .footer{
     background-color:#24262b;
     padding:70px 0;
