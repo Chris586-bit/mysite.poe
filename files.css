@@ -2,6 +2,7 @@ body {
     margin:0px;
     background-color:whitesmoke;
     line-height: 1.5;
+    min-height: 100vh;
 }
 main {
     margin-left:20px;
