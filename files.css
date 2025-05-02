@@ -249,6 +249,16 @@ h1 {
     z-index: -1;
     filter: blur(50px);
 }
+.contact-left{
+    max-width: 850px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    
+}
 .contact-left-title{
     height:100%;
     background:url(images/mountain.jpg) no-repeat center;
