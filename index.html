@@ -123,7 +123,15 @@
                     transition: .2s linear;
                 }
                 .container .image-container .image:hover img{
-                    transform:scale(1.1)
+                    transform:scale(1.1);
+                }
+                .container .popup-image{
+                    position:fixed;
+                    top:0; left:0;
+                    background:rgba(0,0,0,.9);
+                    height:100%;
+                    width:100%;
+                    z-index: 100;
                 }
               </style>
             
@@ -173,7 +181,7 @@
                         <div class="image"><img src="images/school.jpg" alt=""></div>
                     </div>
                 </div>
-                <div class="popup-imag">
+                <div class="popup-image">
                     <img src="images/anim.jpg" alt="">
                     <span>&times;</span>
                 </div>
