@@ -210,6 +210,15 @@
                     <img src="images/anim.jpg" alt="">
                     <span>&times;</span>
                 </div>
+
+                <script>
+                    document.querySelectorAll('image-container img').forEach(image=>{
+                        image.onclick = () =>{
+                            document.querySelector('.popup-image').style.display = 'block';
+                        }
+                        
+                    });
+                </script>
                 <div class="cta-section">
                     <div class="background-over-lay">
 
