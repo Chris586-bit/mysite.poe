@@ -301,3 +301,8 @@ h2:after{
     background-color: #fff;
     border:2px solid rgba(30,85,250,0.47)
 }
+
+*{
+    margin:0; padding:0;
+    box-sizing:border-box;
+}
