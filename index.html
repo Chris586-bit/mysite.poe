@@ -132,6 +132,7 @@
                     height:100%;
                     width:100%;
                     z-index: 100;
+                    display: none;
                 }
                 .container .popup-image span{
                     position:absolute;
@@ -151,6 +152,11 @@
                     border-radius: 5px;
                     width:750px;
                     object-fit: cover;
+                }
+                @media(max-width:768px){
+                    .container .popup-image img{
+                        width:95%;
+                    }
                 }
               </style>
             
