@@ -116,6 +116,15 @@
                     overflow:hidden;
                     cursor:pointer;
                 }
+                .container .image-container .image img{
+                    height:100%;
+                    width:100%;
+                    object-fit: cover;
+                    transition: .2s linear;
+                }
+                .container .image-container .image:hover img{
+                    transform:scale(1.1)
+                }
               </style>
             
         </head>
@@ -163,6 +172,10 @@
                         <div class="image"><img src="images/software.jpg" alt=""></div>
                         <div class="image"><img src="images/school.jpg" alt=""></div>
                     </div>
+                </div>
+                <div class="popup-imag">
+                    <img src="images/anim.jpg" alt="">
+                    <span>&times;</span>
                 </div>
                 <div class="cta-section">
                     <div class="background-over-lay">
