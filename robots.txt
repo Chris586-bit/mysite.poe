@@ -1,0 +1,6 @@
+# robots.txt for https://www.logitech.com/
+
+User-agent: *
+Disallow:
+
+Sitemap: https://www.logitech.com/sitemap.xml
