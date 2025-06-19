@@ -74,25 +74,28 @@
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "LogiTech",
-          "url": "https://yourwebsiteurl.com",
-          "logo": "https://yourwebsiteurl.com/images/x.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+27-63-820-8064",
-            "contactType": "Customer Support",
-            "areaServed": "ZA",
-            "availableLanguage": "English"
+          "@type": "Service",
+          "serviceType": "IT Education Services",
+          "provider": {
+            "@type": "Organization",
+            "name": "LogiTech",
+            "url": "https://www.logitech.com",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.logitech.com/images/lip.png"
+            }
           },
-          "sameAs": [
-            "https://facebook.com/yourpage",
-            "https://instagram.com/yourpage",
-            "https://twitter.com/yourpage",
-            "https://youtube.com/yourpage"
-          ]
+          "areaServed": "ZA",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceLocation": {
+              "@type": "Place",
+              "name": "South Africa"
+            }
+          }
         }
         </script>
+        
         
 </head>
 <body>
