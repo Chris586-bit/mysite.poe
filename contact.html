@@ -1,124 +1,471 @@
-<DOCTYPE! html>
-    <html lang="eng">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE-edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>LogiTech | CONTACT |</title>
-            <link rel="icon" type="image/x-icon" href="images/lip.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LogiTech | CONTACT |</title>
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="images/lip.png"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    /* Base styles */
+    body {
+      background-color: darkgray;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #0f0f0fcc;
+    }
 
-            <link rel="stylesheet" href="files.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-             integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-              crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    h1.logo a {
+      color: #222;
+      text-decoration: none;
+      font-size: 2rem;
+      display: inline-block;
+      margin: 1rem;
+    }
 
-              <style>
-                body{
-                    background-color: darkgray;
-                    background-size: cover;
-                }
-              </style>
-            
-        </head>
-        <body>
-            <h1 class="logo"><a href="index.html"></a>LogiTech</h1>
-            <div>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="enquiry.html">Enquiry</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                    <div class="dropdown">
-                        <button class="dropbtn">Menu</button>
-                        <div class="dropdown-content">
-                            <a href="index.html">Home</a>
-                            <a href="about.html">About</a>
-                            <a href="services.html">Services</a>
-                            <a href="enquiry.html">Enquiry</a>
-                            <a href="contact.html">Contact</a>
-                        </div>
-    
-                    </div>
+    nav.navbar {
+      background: #333;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-                </nav>
+    nav.navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+    }
 
-                <div class="contact-container">
-                    <form action="" class="contact-left">
-                        <div class="contact-left-title">
-                            <div class="left"></div>
-                            <div class="right"></div>
-                            <h2>Get In Touch</h2>
-                            <hr>
+    nav.navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem;
+      transition: background 0.3s ease;
+    }
 
-                        </div>
-                        <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required><br>
-                        <input type="text" name="name" placeholder="Your Surname" class="contact-inputs" required><br>
-                        <input type="tel" placeholder="Cell" required><br>
-                        <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required><br>
-                        <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea><br>
-                        <button type="submit">Submit</button>
-                    </form>
-                    <div class="contact-right">
+    nav.navbar ul li a:hover {
+      background: #555;
+      border-radius: 4px;
+    }
 
-                    </div>
-                </div>
+    /* Dropdown for mobile */
+    .dropdown {
+      display: none; /* will enable for small screens */
+      position: relative;
+    }
 
-                <main>
-                    <h3 style="text-align: center;">CONTACT</h3>
-                </main>
-                <address style="color:rgba(15, 15, 15, 0.589);">
-                    Visit us at:logitech.com<br>
-                    Email:jimmyt@logitech.com<br>
-                    Phone Number: (063) 820 8064<br>
-                    Moetagare<br>
-                    0748<br>
-                    South Africa<br>
-                    <map><iframe src="https://www.google.com/maps/embed?
-                        pb=!1m18!1m12!1m3!1d7308.780826328478!2d28.96791559294262!3d-23.661992364922952!2m3!1f0!2f0!3f0!
-                        3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec7720d818a086d%3A0x88ab55261ff7623!2sMoetagare%2C%200748%2C%20South%20Africa!5e0!
-                        3m2!1sen!2sie!4v1743987321636!5m2!1sen!2sie"
-                         width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></map>
-                </address>
+    .dropbtn {
+      background: #444;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
 
-                <footer class="footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="footer-col">
-                                <h4>Company</h4>
-                                <ul>
-                                    <li><a href="about.hmtl">about</a></li>
-                                    <li><a href="contact.html">contact</a></li>
-                                    <li><a href="enquiry.html">enquiry</a></li>
-                                    <li><a href="services.html">services</a></li>
-                                    <li><a href="index.html">home</a></li>
-                                </ul>
-                            </div>
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      flex-direction: column;
+    }
 
-                        </div>
-                        <div class="footer-col">
-                            <h4>Terms Of Service</h4>
-                        </div>
-                        <div class="footer-col">
-                            <h4>Privacy Policy</h4>
-                        </div>
-                        <div class="footer-col">
-                            <h4>Follow Us</h4>
-                            <div class="social-links"></div>
-                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            </div>
-                        </div>
+    .dropdown-content a {
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      display: block;
+    }
 
-                    </div>
+    .dropdown-content a:hover {
+      background-color: #555;
+    }
 
-                </footer>
+    .dropdown:hover .dropdown-content {
+      display: flex;
+      flex-direction: column;
+    }
 
+    /* Contact container */
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
 
-            </div>
-        </body>
-    </html>
+    form.contact-left {
+      flex: 1 1 400px;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #88888877;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-left-title {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .contact-left-title h2 {
+      margin: 0;
+      color: #222;
+    }
+
+    hr {
+      margin-top: 0.5rem;
+      border: none;
+      height: 2px;
+      background: #444;
+      width: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 2px;
+    }
+
+    .contact-inputs {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-inputs:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    textarea.contact-inputs {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      padding: 0.8rem 1rem;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .contact-right {
+      flex: 1 1 300px;
+      /* placeholder area if you want */
+    }
+
+    main h3 {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #0e0d0d;
+    }
+
+    address {
+      text-align: center;
+      font-style: normal;
+      margin-bottom: 2rem;
+    }
+
+    address a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    address a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer styles */
+    footer.footer {
+      background: #222;
+      color: white;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    footer .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    footer .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    footer .footer-col {
+      flex: 1 1 200px;
+    }
+
+    footer .footer-col h4 {
+      margin-bottom: 1rem;
+      color: #f0f0f0;
+    }
+
+    footer .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    footer .footer-col ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer .footer-col ul li a {
+      color: #bbb;
+      text-decoration: none;
+    }
+
+    footer .footer-col ul li a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .social-links a {
+      color: #bbb;
+      margin-right: 1rem;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav.navbar ul {
+        display: none;
+      }
+      .dropdown {
+        display: block;
+      }
+      .contact-container {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      form.contact-left,
+      .contact-right {
+        flex: 1 1 100%;
+      }
+      iframe {
+        width: 100% !important;
+        height: 250px !important;
+      }
+    }
+
+    /* Success message style */
+    #success-message {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      padding: 1rem;
+      border-radius: 5px;
+      margin: 1rem auto;
+      max-width: 400px;
+      text-align: center;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="logo"><a href="index.html">LogiTech</a></h1>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="enquiry.html">Enquiry</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="contact-container">
+    <form id="contactForm" class="contact-left" novalidate>
+      <div class="contact-left-title">
+        <h2>Get In Touch</h2>
+        <hr />
+      </div>
+      <input
+        type="text"
+        name="first_name"
+        placeholder="Your Name"
+        class="contact-inputs"
+        required
+      /><br />
+      <input
+        type="text"
+        name="last_name"
+        placeholder="Your Surname"
+        class="contact-inputs"
+        required
+      /><br />
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Cell"
+        class="contact-inputs"
+        required
+        pattern="[0-9+\-\s]+"
+        title="Please enter a valid phone number"
+      /><br />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        class="contact-inputs"
+        required
+      /><br />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        class="contact-inputs"
+        required
+      ></textarea
+      ><br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="contact-right">
+      <!-- Optional: image or info -->
+    </div>
+  </div>
+
+  <div id="success-message">Thank you for contacting us! We will get back to you soon.</div>
+
+  <main>
+    <h3>CONTACT</h3>
+  </main>
+
+  <address>
+    Visit us at:
+    <a href="https://logitech.com" target="_blank" rel="noopener noreferrer"
+      >logitech.com</a
+    ><br />
+    Email:
+    <a href="mailto:jimmyt@logitech.com">jimmyt@logitech.com</a><br />
+    Phone Number: (063) 820 8064<br />
+    Moetagare, 0748, South Africa<br /><br />
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7308.780826328478!2d28.96791559294262!3d-23.661992364922952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec7720d818a086d%3A0x88ab55261ff7623!2sMoetagare%2C%200748%2C%20South%20Africa!5e0!3m2!1sen!2sie!4v1743987321636!5m2!1sen!2sie"
+      width="300"
+      height="250"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </address>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">about</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="enquiry.html">enquiry</a></li>
+            <li><a href="services.html">services</a></li>
+            <li><a href="index.html">home</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Terms Of Service</h4>
+        </div>
+        <div class="footer-col">
+          <h4>Privacy Policy</h4>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Normally, mailto form can't be detected if sent successfully,
+      // so here we simulate submission success
+
+      // Clear inputs
+      form.reset();
+
+      // Show success message
+      successMessage.style.display = "block";
+
+      // Hide the message after 5 seconds
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
