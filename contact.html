@@ -496,5 +496,54 @@
       }, 5000);
     });
   </script>
+  <script>
+    function validateForm() {
+      const errors = [];
+      const name = document.getElementById('name').value.trim();
+      const surname = document.getElementById('surname').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const errorDiv = document.getElementById('errorMessages');
+      
+      // Clear previous errors
+      errorDiv.innerHTML = '';
+    
+      // Name validation: letters only, min 2 characters
+      if (!/^[A-Za-z]{2,}$/.test(name)) {
+        errors.push('Please enter a valid name (letters only, at least 2 characters).');
+      }
+    
+      // Surname validation: letters only, min 2 characters
+      if (!/^[A-Za-z]{2,}$/.test(surname)) {
+        errors.push('Please enter a valid surname (letters only, at least 2 characters).');
+      }
+    
+      // Phone validation: digits only, 7-15 digits (adjust based on your needs)
+      if (!/^\d{7,15}$/.test(phone)) {
+        errors.push('Please enter a valid phone number (7 to 15 digits).');
+      }
+    
+      // Email validation: basic pattern
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        errors.push('Please enter a valid email address.');
+      }
+    
+      // Message validation: minimum 10 characters
+      if (message.length < 10) {
+        errors.push('Message should be at least 10 characters long.');
+      }
+    
+      // If errors exist, display and prevent form submission
+      if (errors.length > 0) {
+        errorDiv.innerHTML = errors.join('<br>');
+        return false;  // prevent form submit
+      }
+    
+      // If no errors, allow form submission
+      return true;
+    }
+    </script>
+    
 </body>
 </html>
