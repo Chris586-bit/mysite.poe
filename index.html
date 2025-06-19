@@ -1,292 +1,203 @@
-<DOCTYPE! html>
-    <html lang="eng">
-        <head>
-             <meta charset="UTF-8">
-             <meta http-equiv="X-UA-Compatible" content="IE-edge">
-             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <title>LogiTech | HOME |</title>
-             <link rel="icon" type="image/x-icon" href="images/x.png">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogiTech | HOME</title>
+    <link rel="icon" type="image/x-icon" href="images/x.png" />
+    <link rel="stylesheet" href="files.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-             <link rel="stylesheet" href="files.css">
-             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-             integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-              crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-image: url(images/ai.jpg);
+            background-size: cover;
+            font-family: sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 5px solid #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #f96700;
+        }
 
-              <style>
-                body{
-                    background-image: url(images/ai.jpg);
-                    background-size: cover;
-                    font-family: sans-serif;
-                    color:#fff
-                }
-                .cta-section{
-                    position:relative;
-                    overflow:hidden;
-                    padding:100px 30px;
-                    margin-top:100px;
-                }
-                .background-overlay{
-                    background:linear-gradient(to right,rgb(100,75,70)0%,rgba(120,90,80,0.7)100%);
-                    position:absolute;
-                    top:0;
-                    left:0;
-                    width:100%;
-                    height:100%
-                }
-                .cta-content{
-                    z-index: 1;
-                    position: relative;
-                    max-width: 1200px;
-                    margin:auto;
-                    text-align: center;
-                }
-                h2{
-                    font-size: 50px;
-                    letter-spacing: 2px;
-                    font-family: "Permanent Marker",cursive;
-                    margin:15px 0;
-                }
-                p{
-                    line-height: 24px;
-                }
-                .cta-btn{
-                    padding:58px 20px;
-                    line-height:21px;
-                    font-size:18px;
-                    color:#fff;
-                    text-decoration: none;
-                    background:#f96700;
-                    text-transform: uppercase;
-                    display:block;
-                }
-                .btn-holder{
-                    float:left;
-                }
-                .cta-col{
-                    margin-bottom: 15px;
-                    width:100%;
-                    float:left;
-                }
-                @media (min-width:768px){
-                    .cta-content{
-                        text-align: left;
-                    }
-                    .cta-col{
-                        min-height: 200px;
-                    }
-                    .col_1{width:60%}
-                    .col_2{width:40%}
-                }
-                .col-2{
-                    display:flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                *{
-                    margin:0; padding:0;
-                    box-sizing:border-box;
-                }
-                .container{
-                    position:relative;
-                    min-height:100vh;
-                    background:#ddd;
-                }
-                .container h1{
-                    font-size: 40px;
-                    font-family: Verdana, Geneva, Tahoma, sans-serif;
-                    font-weight: noraml;
-                    padding:15px;
-                    color:#333;
-                    text-align: center;
-                    text-transform: capitalize;
-                }
-                .container .image-container{
-                    display:flex;
-                    flex-wrap: wrap;
-                    gap:15px;
-                    justify-content: center;
-                    padding:10px;
-                }
-                .container .image-container .image{
-                    height:250px;
-                    width:350px;
-                    border:10px solid #fff;
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-                    overflow:hidden;
-                    cursor:pointer;
-                }
-                .container .image-container .image img{
-                    height:100%;
-                    width:100%;
-                    object-fit: cover;
-                    transition: 0.2s linear;
-                }
-                .container .image-container .image:hover img{
-                    transform:scale(1.1);
-                }
-                .container .popup-image{
-                    position:fixed;
-                    top:0; left:0;
-                    background:rgba(0,0,0,.9);
-                    height:100%;
-                    width:100%;
-                    z-index: 100;
-                    display: none;
-                }
-                .container .popup-image span{
-                    position:absolute;
-                    top:0; right:10px;
-                    font-size: 60px;
-                    font-weight: bolder;
-                    color:#fff;
-                    cursor:pointer;
-                    z-index: 100;
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .lightbox.show {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border: 5px solid #fff;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .lightbox span {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 60px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            user-select: none;
+        }
+        .lightbox .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            color: #fff;
+            cursor: pointer;
+            user-select: none;
+            padding: 10px;
+        }
+        .lightbox .prev {
+            left: 30px;
+        }
+        .lightbox .next {
+            right: 30px;
+        }
+    </style>
+</head>
 
-                }
-                .container .popup-image img{
-                    position:absolute;
-                    top:50%; left:50%;
-                    transform: translate(-50%, -50%);
-                    border:5px solid #fff;
-                    border-radius: 5px;
-                    width:750px;
-                    object-fit: cover;
-                }
-                @media(max-width:768px){
-                    .container .popup-image img{
-                        width:95%;
-                    }
-                }
-              </style>
-            
-        </head>
-        <body style="margin:0">
-            <h1 class="logo"><a href="index.html"></a>LogiTech</h1>
-            <div>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="enquiry.html">Enquiry</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                    <div class="dropdown">
-                        <button class="dropbtn">Menu</button>
-                        <div class="dropdown-content">
-                            <a href="index.html">Home</a>
-                            <a href="about.html">About</a>
-                            <a href="services.html">Services</a>
-                            <a href="enquiry.html">Enquiry</a>
-                            <a href="contact.html">Contact</a>
-                        </div>
-    
-                    </div>
+<body>
 
-                </nav>
+    <h1 class="logo">LogiTech</h1>
 
-                <main>
-                </main>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-                <div class="hero-image">
-                    <h1>WELCOME TO LogiTECH <br> <span>Online IT School</span></h1>
-                   
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <h1>GALLERY</h1>
+    <main>
+        <div class="hero-image">
+            <h1>WELCOME TO LogiTECH <br> <span>Online IT School</span></h1>
+        </div>
 
-                <div class="container">
+        <h1>Gallery</h1>
 
-                    <div class="image-container">
-                        <div class="image"><img src="images/anim.jpg" alt=""></div>
-                        <div class="image"><img src="images/blue.jpg" alt=""></div>
-                        <div class="image"><img src="images/web.jpg" alt=""></div>
-                        <div class="image"><img src="images/tech.jpg" alt=""></div>
-                        <div class="image"><img src="images/software.jpg" alt=""></div>
-                        <div class="image"><img src="images/school.jpg" alt=""></div>
-                    </div>
-                </div>
-                <div class="popup-image">
-                    <span>&times;</span>
-                    <img src="" alt="">
-                </div>
+        <div class="gallery">
+            <img src="images/anim.jpg" alt="Animation" />
+            <img src="images/blue.jpg" alt="Blue Theme" />
+            <img src="images/web.jpg" alt="Web Design" />
+            <img src="images/tech.jpg" alt="Technology" />
+            <img src="images/software.jpg" alt="Software" />
+            <img src="images/school.jpg" alt="School" />
+        </div>
+    </main>
 
-                <script>
-                    document.querySelectorAll('image-container img').forEach(image=>{
-                        image.onclick = () =>{
-                            document.querySelector('.popup-image').style.display='block';
-                            document.querySelector('.popup-image img').src=image.getAttribute('src')
-                            
-                        }
-                        
-                    });
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span id="close">&times;</span>
+        <img src="" alt="" id="lightbox-img" />
+        <div class="nav prev" id="prev">&#10094;</div>
+        <div class="nav next" id="next">&#10095;</div>
+    </div>
 
-                    document.querySelector('popup-image span').onclick=()=>{
-                        document.querySelector('.popup-image').style.display='none';
-                    }
-                </script>
-                <div class="cta-section">
-                    <div class="background-over-lay">
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const close = document.getElementById('close');
+        const next = document.getElementById('next');
+        const prev = document.getElementById('prev');
+        const images = document.querySelectorAll('.gallery img');
+        let currentIndex = 0;
 
-                    </div>
-                    <div class="cta-content">
-                        <div class="cta-col col_1">
-                            <div class="col-content">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cta-col col_2">
-                        <div class="col-content">
-                            <div class="btn-holder">
-                                <a href="#" class="cta-btn">Call Us Now</a>
+        function showLightbox(index) {
+            currentIndex = index;
+            lightboxImg.src = images[currentIndex].src;
+            lightboxImg.alt = images[currentIndex].alt;
+            lightbox.classList.add('show');
+        }
 
-                            </div>
-                        </div>
-                    </div>
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                showLightbox(index);
+            });
+        });
 
-                </div>
-                <footer class="footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="footer-col">
-                                <h4>Company</h4>
-                                <ul>
-                                    <li><a href="about.html">about</a></li>
-                                    <li><a href="contact.html">contact</a></li>
-                                    <li><a href="enquiry.html">enquiry</a></li>
-                                    <li><a href="services.html">services</a></li>
-                                    <li><a href="index.html">home</a></li>
-                                </ul>
-                            </div>
+        close.addEventListener('click', () => {
+            lightbox.classList.remove('show');
+        });
 
-                        </div>
-                        <div class="footer-col">
-                            <h4>Terms Of Service</h4>
-                        </div>
-                        <div class="footer-col">
-                            <h4>Privacy Policy</h4>
-                        </div>
-                        <div class="footer-col">
-                            <h4>Follow Us</h4>
-                            <div class="social-links"></div>
-                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                            </div>
-                        </div>
+        next.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showLightbox(currentIndex);
+        });
 
-                    </div>
+        prev.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showLightbox(currentIndex);
+        });
 
-                </footer>
+        // Close lightbox on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('show')) return;
 
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('show');
+            } else if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % images.length;
+                showLightbox(currentIndex);
+            } else if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showLightbox(currentIndex);
+            }
+        });
 
-            </div>
-        </body>
-    </html>
+        // Close when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === close) {
+                lightbox.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>
